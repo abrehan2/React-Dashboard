@@ -1,7 +1,18 @@
+// IMPORTS -
+import Sidebar from "../components/Sidebar";
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <>
+      <div className="adminContainer">
+        {/* -sidebar and main will come here */}
+        <Sidebar />
+        <main>
+            Dashboard
+        </main>
+      </div>
+    </>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

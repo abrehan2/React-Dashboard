@@ -11,6 +11,7 @@
   $gap: 1rem
 ) {
   display: flex;
+  flex-direction: $dir;
   justify-content: $justifyContent;
   align-items: $alignItems;
   gap: $gap;
