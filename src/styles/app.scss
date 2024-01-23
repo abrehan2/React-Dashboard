@@ -1,5 +1,31 @@
+// IMPORTS -
+@use "mixin.scss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #061826;
+}
+
+.blue {
+    color: #3B71CA;
+}
+
+.gray {
+    color: #9FA5B2;
+}
+
+.black {
+    color: #061826;
 }
