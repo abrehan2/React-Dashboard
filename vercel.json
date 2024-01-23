@@ -1,6 +1,6 @@
 {
   "version": 2,
   "name": "React-Dashboard",
-  "builds": [{ "src": "/src/main.tsx", "use": "@vercel/node" }],
+  "builds": [{ "src": "main.tsx", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/src/main.tsx" }]
 }
