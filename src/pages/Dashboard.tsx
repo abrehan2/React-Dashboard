@@ -5,6 +5,7 @@ import { FaRegBell } from "react-icons/fa";
 import WidgetItem from "../components/WidgetItem";
 import CategoryItem from "../components/CategoryItem";
 import data from "../assets/data.json";
+import { BarChart } from "../components/Charts";
 
 const Dashboard = () => {
   return (
@@ -51,7 +52,14 @@ const Dashboard = () => {
           <section className="graphContainer">
             <div className="revenueChart">
               <h2>Revenue & Transaction</h2>
-              {/* GRAPH HERE */}
+              <BarChart
+                data_1={[10000, 20000, 30000, 40000, 50000, 60000, 70000]}
+                data_2={[5000, 12000, 25000, 30000, 45000, 20000, 35000]}
+                title_1="Revenue"
+                title_2="Transaction"
+                bgColor_1="#061826"
+                bgColor_2="#f26419"
+              />
             </div>
 
             <div className="dashboardCategories">

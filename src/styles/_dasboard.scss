@@ -80,6 +80,7 @@
     .revenueChart {
       width: 100%;
       padding: 1rem 3rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
 
       > h2 {
         @include heading;
@@ -93,6 +94,7 @@
       max-width: 16rem;
       @include flex(column, center, unset, 0);
       padding-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
       > h2 {
         @include heading;
         margin: 1.5rem 0 2rem 0;

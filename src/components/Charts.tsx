@@ -7,6 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartData,
+  ChartOptions,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
@@ -44,31 +46,34 @@ export const BarChart = ({
   horizontal = false,
   labels = months,
 }: BarChartProps) => {
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
+    indexAxis: horizontal ? "y" : "x",
+
     plugins: {
       legend: {
-        position: "top" as const,
+        display: true,
       },
       title: {
-        display: true,
-        text: "Chart.js Bar Chart",
+        display: false,
       },
     },
+
+   
   };
 
-  const data = {
+  const data: ChartData<"bar", number[], string> = {
     labels,
     datasets: [
       {
-        label: "Dataset 1",
+        label: title_1,
         data: data_1,
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        backgroundColor: bgColor_1,
       },
       {
-        label: "Dataset 2",
+        label: title_2,
         data: data_2,
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        backgroundColor: bgColor_2,
       },
     ],
   };
