@@ -19,5 +19,36 @@
       "value": 100,
       "heading": "Cameras"
     }
+  ],
+
+  "transaction": [
+    {
+      "id": "ksdnfkjsdfx",
+      "amount": 4000,
+      "quantity": 4,
+      "discount": 300,
+      "status": "Processing"
+    },
+    {
+      "id": "sdsdssdsd",
+      "amount": 5100,
+      "quantity": 2,
+      "discount": 900,
+      "status": "Rejected"
+    },
+    {
+      "id": "sdsdcvsssdsd",
+      "amount": 13000,
+      "quantity": 91,
+      "discount": 0,
+      "status": "Shipped"
+    },
+    {
+      "id": "dfddddfd",
+      "amount": 2300,
+      "quantity": 4,
+      "discount": 2000,
+      "status": "Rejected"
+    }
   ]
 }

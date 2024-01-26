@@ -164,10 +164,18 @@
         font-size: 2rem;
         color: rgba(0, 0, 0, 0.634);
       }
-
     }
 
+    .transactionBox {
+      width: 100%;
+      padding: 1rem;
+      overflow-x: auto;
+
+      > h2 {
+        margin: 1.5rem 0 0 0;
+        text-align: center;
+        @include heading;
+      }
+    }
   }
-
-
 }
