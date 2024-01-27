@@ -126,7 +126,7 @@ const Products = () => {
 
   // TABLEHOC IS RETURNING A FUNCTION, SO WE USED USECALLBACK HOOK TAKAY BAAR BAAR CALL NA HO FUNCTION -
   const Table = useCallback(
-    TableHOC<DataType>(columns, data, "productBox", "Products", 2),
+    TableHOC<DataType>(columns, data, "productBox", "Products", 3, true),
     []
   );
 

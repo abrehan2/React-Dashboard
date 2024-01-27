@@ -24,8 +24,19 @@ function TableHOC<T extends object>(
       },
     };
 
-    const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
-      useTable(options, useSortBy, usePagination);
+    const {
+      getTableProps,
+      getTableBodyProps,
+      headerGroups,
+      page,
+      prepareRow,
+      nextPage,
+      previousPage,
+      canNextPage,
+      canPreviousPage,
+      pageCount,
+      state: { pageIndex },
+    } = useTable(options, useSortBy, usePagination);
 
     return (
       <>
@@ -60,6 +71,18 @@ function TableHOC<T extends object>(
               })}
             </tbody>
           </table>
+
+          {showPagination && (
+            <div className="tablePagination">
+              <button disabled={!canPreviousPage} onClick={previousPage}>
+                Prev
+              </button>
+              <span>{`${pageIndex + 1} of ${pageCount}`}</span>
+              <button disabled={!canNextPage} onClick={nextPage}>
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </>
     );
