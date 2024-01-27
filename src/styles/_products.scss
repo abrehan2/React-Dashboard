@@ -1,0 +1,21 @@
+.productBox {
+  background-color: white;
+  padding: 2rem;
+  overflow: auto;
+  @include square(100%);
+}
+
+.createProductBtn {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  @include square(2.5rem);
+  @include flex(row, center, center, 0);
+  background-color: $blue;
+  color: white;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

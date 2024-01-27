@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixin";
 @import "dasboard";
+@import "products";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -85,7 +86,7 @@ a {
 
   tbody {
     tr {
-      box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.093);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.093);
     }
 
     td {
@@ -100,8 +101,8 @@ a {
 
       a {
         text-decoration: none;
-        background-color: rgba(44, 104, 255, 0.455);
-        color: rgb(44, 104, 255);
+        background-color: rgba(255, 147, 7, 0.455);
+        color: white;
         padding: 0.25rem 0.5rem;
         border-radius: 10px;
       }

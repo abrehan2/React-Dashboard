@@ -1,20 +1,31 @@
 // IMPORTS -
-import { useTable, Column, TableOptions } from "react-table";
+import {
+  useTable,
+  Column,
+  TableOptions,
+  useSortBy,
+  usePagination,
+} from "react-table";
 
-function TableHOC<T extends Object>(
+function TableHOC<T extends object>(
   columns: Column<T>[],
   data: T[],
   containerClassName: string,
-  heading: string
+  heading: string,
+  size: number,
+  showPagination: boolean = false
 ) {
   return function HOC() {
     const options: TableOptions<T> = {
       columns,
       data,
+      initialState: {
+        pageSize: size,
+      },
     };
 
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-      useTable(options);
+    const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
+      useTable(options, useSortBy, usePagination);
 
     return (
       <>
@@ -26,7 +37,9 @@ function TableHOC<T extends Object>(
               {headerGroups.map((headerGroup) => (
                 <tr {...headerGroup.getHeaderGroupProps()}>
                   {headerGroup.headers.map((column) => (
-                    <th {...column.getHeaderProps()}>
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                    >
                       {column.render("Header")}
                     </th>
                   ))}
@@ -34,7 +47,7 @@ function TableHOC<T extends Object>(
               ))}
             </thead>
             <tbody {...getTableBodyProps()}>
-              {rows.map((row) => {
+              {page.map((row) => {
                 prepareRow(row);
 
                 return (
