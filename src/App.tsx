@@ -7,9 +7,13 @@ import {
   Products,
   Customers,
   Transaction,
+  ProductManagement,
+  TransactionManagement,
+  NewProduct
 } from "./utils/lazyRoutes";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
+
 
 const App = () => {
   return (
@@ -20,6 +24,11 @@ const App = () => {
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/customer" element={<Customers />} />
           <Route path="/admin/transaction" element={<Transaction />} />
+
+          {/* MANAGEMENT */}
+          <Route path="/admin/product/new" element={<NewProduct />} />
+          <Route path="/admin/product/:id" element={<ProductManagement />} />
+          <Route path="/admin/transaction/:id" element={<TransactionManagement />} />
         </Routes>
       </Suspense>
     </Router>
