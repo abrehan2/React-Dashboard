@@ -19,3 +19,63 @@
     opacity: 0.8;
   }
 }
+
+.productManagement {
+  @include flex(row, center, unset);
+  padding: 3rem;
+  min-height: 100vh;
+  overflow: hidden;
+
+  > article {
+    min-height: 85vh;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: $orange;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
+    overflow: hidden;
+
+    > form {
+      @include flex(column, unset, center, 2rem);
+      color: white;
+
+      > h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      > div {
+        width: 100%;
+        position: relative;
+
+        > label {
+          position: absolute;
+          left: 0;
+          top: -1.5rem;
+        }
+
+        > input {
+          @include inputStyle(
+            100%,
+            1rem,
+            1px solid rgba(13, 13, 13, 0.196),
+            unset
+          );
+          border-radius: 5px;
+        }
+      }
+
+      > button {
+        padding: 1rem;
+        border: none;
+        background-color: $black;
+        color: white;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
