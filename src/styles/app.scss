@@ -3,6 +3,7 @@
 @import "mixin";
 @import "dasboard";
 @import "products";
+@import "chart";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,10 +30,13 @@ a {
   color: #a20021;
 }
 
+.blue {
+  color: #3b71ca;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;

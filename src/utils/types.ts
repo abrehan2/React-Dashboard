@@ -15,7 +15,7 @@ export type OrderTypeProps = {
   country: string;
   state: string;
   pinCode: number;
-  status: "Processing" | "shipped" | "Delivered";
+  status: "Processing" | "Shipped" | "Delivered";
   subTotal: number;
   discount: number;
   shippingCharges: number;

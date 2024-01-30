@@ -9,3 +9,6 @@ export const Customers = lazy(() => import("../pages/Customers"));
 export const NewProduct = lazy(() => import("../pages/management/NewProduct"));
 export const ProductManagement = lazy(() => import("../pages/management/ProductManagement"));
 export const TransactionManagement = lazy(() => import("../pages/management/TransactionManagement"));
+export const BarChart = lazy(() => import("../pages/charts/BarChart"));
+export const LineChart = lazy(() => import("../pages/charts/LineChart"));
+export const PieChart = lazy(() => import("../pages/charts/PieChart"));

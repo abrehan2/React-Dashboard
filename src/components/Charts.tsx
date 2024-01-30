@@ -11,7 +11,7 @@ import {
   ChartOptions,
   ArcElement,
 } from "chart.js";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut, Pie } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -39,13 +39,13 @@ interface BarChartProps {
 }
 
 export const BarChart = ({
+  horizontal = false,
   data_1 = [],
   data_2 = [],
   title_1,
   title_2,
   bgColor_1,
   bgColor_2,
-  horizontal = false,
   labels = months,
 }: BarChartProps) => {
   const options: ChartOptions<"bar"> = {
@@ -78,10 +78,10 @@ export const BarChart = ({
     ],
   };
 
-  return <Bar options={options} data={data} />;
+  return <Bar options={options} data={data} width={horizontal ? "200%" : ""} />;
 };
 
-// MALE-FEMALE RATIO CHART -
+// INTERFACE -
 interface DoughnutChartProps {
   labels: string[];
   data: number[];
@@ -91,6 +91,7 @@ interface DoughnutChartProps {
   offset?: number[];
 }
 
+// DOUGHNUT CHART -
 export const DoughnutChart = ({
   labels,
   data,
@@ -126,4 +127,43 @@ export const DoughnutChart = ({
   };
 
   return <Doughnut data={doughnutData} options={doughnutOptions} />;
+};
+
+// INTERFACE -
+interface PieChartProps {
+  labels: string[];
+  data: number[];
+  backgroundColor: string[];
+  offset?: number[];
+}
+
+// PIE CHART -
+export const PieChart = ({
+  labels,
+  data,
+  backgroundColor,
+  offset,
+}: PieChartProps) => {
+  const pieData: ChartData<"pie", number[], string> = {
+    labels,
+    datasets: [
+      {
+        data,
+        backgroundColor,
+        borderWidth: 1,
+        offset,
+      },
+    ],
+  };
+
+  const pieOptions: ChartOptions<"pie"> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+
+  return <Pie data={pieData} options={pieOptions} />;
 };

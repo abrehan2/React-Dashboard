@@ -9,10 +9,14 @@ import {
   Transaction,
   ProductManagement,
   TransactionManagement,
-  NewProduct
+  NewProduct,
+  BarChart,
+  LineChart,
+  PieChart
 } from "./utils/lazyRoutes";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
+
 
 
 const App = () => {
@@ -25,10 +29,18 @@ const App = () => {
           <Route path="/admin/customer" element={<Customers />} />
           <Route path="/admin/transaction" element={<Transaction />} />
 
+          {/* CHARTS */}
+          <Route path="/admin/chart/bar" element={<BarChart />} />
+          <Route path="/admin/chart/line" element={<LineChart />} />
+          <Route path="/admin/chart/pie" element={<PieChart />} />
+
           {/* MANAGEMENT */}
           <Route path="/admin/product/new" element={<NewProduct />} />
           <Route path="/admin/product/:id" element={<ProductManagement />} />
-          <Route path="/admin/transaction/:id" element={<TransactionManagement />} />
+          <Route
+            path="/admin/transaction/:id"
+            element={<TransactionManagement />}
+          />
         </Routes>
       </Suspense>
     </Router>
