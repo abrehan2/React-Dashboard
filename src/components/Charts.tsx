@@ -10,8 +10,11 @@ import {
   ChartData,
   ChartOptions,
   ArcElement,
+  PointElement,
+  LineElement,
+  Filler
 } from "chart.js";
-import { Bar, Doughnut, Pie } from "react-chartjs-2";
+import { Bar, Doughnut, Pie, Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -20,7 +23,10 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  ArcElement
+  ArcElement,
+  PointElement,
+  LineElement,
+  Filler
 );
 
 // MONTHS -
@@ -166,4 +172,48 @@ export const PieChart = ({
   };
 
   return <Pie data={pieData} options={pieOptions} />;
+};
+
+// INTERFACE -
+interface LineChartProps {
+  data: number[];
+  label: string;
+  bgColor: string;
+  borderColor: string;
+  labels?: string[];
+}
+
+export const LineChart = ({
+  data,
+  label,
+  bgColor,
+  borderColor,
+  labels = months,
+}: LineChartProps) => {
+  const options: ChartOptions<"line"> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+      },
+      title: {
+        display: false,
+      },
+    },
+  };
+
+  const lineChartData: ChartData<"line", number[], string> = {
+    labels,
+    datasets: [
+      {
+        label,
+        data,
+        backgroundColor: bgColor,
+        borderColor,
+        fill: true
+      },
+    ],
+  };
+
+  return <Line options={options} data={lineChartData} />;
 };

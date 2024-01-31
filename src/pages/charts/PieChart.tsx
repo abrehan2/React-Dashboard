@@ -1,9 +1,7 @@
 // IMPORTS -
 import Sidebar from "../../components/Sidebar";
-import {DoughnutChart, PieChart as Pie} from "../../components/Charts";
-import {categories} from "../../assets/data.json";
-
-
+import { DoughnutChart, PieChart as Pie } from "../../components/Charts";
+import { categories } from "../../assets/data.json";
 
 const PieChart = () => {
   return (
@@ -20,10 +18,8 @@ const PieChart = () => {
               offset={[5, 5, 5]}
             />
           </div>
-
           <h2>Order ratio</h2>
         </section>
-
         <section>
           <div>
             <DoughnutChart
@@ -33,7 +29,6 @@ const PieChart = () => {
               offset={[5, 5, 5]}
             />
           </div>
-
           <h2>Product categories ratio</h2>
         </section>
       </main>
