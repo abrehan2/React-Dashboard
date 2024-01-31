@@ -12,12 +12,13 @@ import {
   NewProduct,
   BarChart,
   LineChart,
-  PieChart
+  PieChart,
+  Coupon,
+  Toss,
+  Stopwatch,
 } from "./utils/lazyRoutes";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
-
-
 
 const App = () => {
   return (
@@ -41,6 +42,11 @@ const App = () => {
             path="/admin/transaction/:id"
             element={<TransactionManagement />}
           />
+
+          {/* APPS */}
+          <Route path="/admin/app/coupon" element={<Coupon />} />
+          <Route path="/admin/app/toss" element={<Toss />} />
+          <Route path="/admin/app/stopwatch" element={<Stopwatch />} />
         </Routes>
       </Suspense>
     </Router>
@@ -49,7 +55,6 @@ const App = () => {
 
 export default App;
 
-
 // NOTES:
-// JAB TAK YE COMPONENTS LOAD NAE HOTE SARAY TAB TAK HUM LOADER DEKHA SAKTE AND USKE LIYE WE CAN KEEP THESE ROUTES IN SUSPENSE 
+// JAB TAK YE COMPONENTS LOAD NAE HOTE SARAY TAB TAK HUM LOADER DEKHA SAKTE AND USKE LIYE WE CAN KEEP THESE ROUTES IN SUSPENSE
 // COMPONENTS ARE DYNAMICALLY IMPORTED USING LAZY (CHUNKS MAIN COMPONENTS BHEJTE HAI AND NOT IN BUNDLE, ISAY CODE SPLITTING BHI KHETE HAI. HAR PAGE KA COMPONENT TAB LOAD HO JAB WO TRIGGER HO)
