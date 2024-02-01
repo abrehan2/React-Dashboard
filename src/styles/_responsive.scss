@@ -1,0 +1,74 @@
+@media screen and (width <= 1200px) {
+  .adminContainer {
+    overflow: auto;
+  }
+
+  .dashboard {
+    .widgetContainer,
+    .graphContainer,
+    .transactionContainer {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .graphContainer {
+      padding: 2rem;
+    }
+
+    .transactionContainer {
+      height: unset;
+      padding: 2rem;
+    }
+  }
+
+  .productManagement {
+    padding: 2rem;
+  }
+}
+
+@media screen and (width <= 1100px) {
+  .adminContainer {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bar {
+    justify-content: flex-end !important;
+    #search {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (width <= 600px) {
+  .productBox {
+    padding: 4rem;
+  }
+
+  .productManagement {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    > section {
+      max-width: 400px;
+    }
+
+    > article {
+      min-height: 55vh;
+      margin: 2rem;
+    }
+  }
+
+  .chartContainer {
+    padding: 3rem;
+
+    > h1 {
+      margin: 0;
+      text-align: center;
+    }
+
+    > section {
+      margin: 8rem auto;
+    }
+  }
+}

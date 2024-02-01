@@ -64,7 +64,6 @@ const ProductManagement = () => {
                 placeholder="Name"
                 onChange={(e) => setNameUpdate(e.target.value)}
                 value={nameUpdate}
-                
               />
             </div>
 
@@ -75,7 +74,6 @@ const ProductManagement = () => {
                 placeholder="Price"
                 onChange={(e) => setPriceUpdate(Number(e.target.value))}
                 value={priceUpdate}
-                
               />
             </div>
 
@@ -86,17 +84,12 @@ const ProductManagement = () => {
                 placeholder="Stock"
                 onChange={(e) => setStockUpdate(Number(e.target.value))}
                 value={stockUpdate}
-                
               />
             </div>
 
             <div>
               <label>Image</label>
-              <input
-                type="file"
-                onChange={imageHandler}                
-                accept="image/*"
-              />
+              <input type="file" onChange={imageHandler} accept="image/*" />
             </div>
 
             <button type="submit">Update product</button>

@@ -17,7 +17,7 @@ const Dashboard = () => {
         <main className="dashboard">
           <div className="bar">
             <BsSearch />
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" id="search" />
             <FaRegBell />
             <img src="https://iili.io/JaZsKOJ.png" alt="User" />
           </div>
