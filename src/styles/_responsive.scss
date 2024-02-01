@@ -1,6 +1,7 @@
 @media screen and (width <= 1200px) {
   .adminContainer {
     overflow: auto;
+   
   }
 
   .dashboard {
@@ -9,6 +10,7 @@
     .transactionContainer {
       justify-content: center;
       flex-wrap: wrap;
+      padding-right: 0;
     }
 
     .graphContainer {
@@ -40,9 +42,9 @@
 }
 
 @media screen and (width <= 600px) {
-  .productBox {
-    padding: 4rem;
-  }
+  // .productBox {
+  //   padding: 4rem;
+  // }
 
   .productManagement {
     flex-direction: column;
@@ -60,7 +62,7 @@
   }
 
   .chartContainer {
-    padding: 3rem;
+    // padding: 3rem;
 
     > h1 {
       margin: 0;
