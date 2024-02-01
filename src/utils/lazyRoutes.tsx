@@ -12,6 +12,4 @@ export const TransactionManagement = lazy(() => import("../pages/management/Tran
 export const BarChart = lazy(() => import("../pages/charts/BarChart"));
 export const LineChart = lazy(() => import("../pages/charts/LineChart"));
 export const PieChart = lazy(() => import("../pages/charts/PieChart"));
-export const Coupon = lazy(() => import("../pages/apps/Coupon"));
-export const Stopwatch = lazy(() => import("../pages/apps/Stopwatch"));
-export const Toss = lazy(() => import("../pages/apps/Toss"));
+

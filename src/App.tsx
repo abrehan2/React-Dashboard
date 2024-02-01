@@ -12,10 +12,7 @@ import {
   NewProduct,
   BarChart,
   LineChart,
-  PieChart,
-  Coupon,
-  Toss,
-  Stopwatch,
+  PieChart
 } from "./utils/lazyRoutes";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
@@ -43,10 +40,6 @@ const App = () => {
             element={<TransactionManagement />}
           />
 
-          {/* APPS */}
-          <Route path="/admin/app/coupon" element={<Coupon />} />
-          <Route path="/admin/app/toss" element={<Toss />} />
-          <Route path="/admin/app/stopwatch" element={<Stopwatch />} />
         </Routes>
       </Suspense>
     </Router>

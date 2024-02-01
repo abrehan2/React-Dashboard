@@ -1,17 +1,16 @@
 // IMPORTS -
 import { IconType } from "react-icons";
-import { RiCoupon3Fill, RiDashboardFill, RiShoppingBag3Fill } from "react-icons/ri";
+import { RiDashboardFill, RiShoppingBag3Fill } from "react-icons/ri";
 import { AiFillFileText } from "react-icons/ai";
 import { IoIosPeople } from "react-icons/io";
-import { FaChartBar, FaChartLine, FaChartPie, FaGamepad, FaStopwatch } from "react-icons/fa";
-
+import { FaChartBar, FaChartLine, FaChartPie } from "react-icons/fa";
 
 // INTERFACE -
 interface ListProps {
   url: string;
   text: string;
   Icon: IconType;
-  id: number; 
+  id: number;
 }
 
 // DASHBOARD -
@@ -65,30 +64,6 @@ export const ChartContents: ListProps[] = [
     url: "/admin/chart/line",
     text: "Line",
     Icon: FaChartLine,
-    id: Math.random() * 100,
-  },
-];
-
-// APPS -
-export const AppContents: ListProps[] = [
-  {
-    url: "/admin/app/stopwatch",
-    text: "Stopwatch",
-    Icon: FaStopwatch,
-    id: Math.random() * 100,
-  },
-
-  {
-    url: "/admin/app/coupon",
-    text: "Coupon",
-    Icon: RiCoupon3Fill,
-    id: Math.random() * 100,
-  },
-
-  {
-    url: "/admin/app/toss",
-    text: "Toss",
-    Icon: FaGamepad,
     id: Math.random() * 100,
   },
 ];
