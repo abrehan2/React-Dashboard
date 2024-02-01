@@ -8,6 +8,8 @@ const NewProduct = () => {
   const [stock, setStock] = useState<number>();
   const [photo, setPhoto] = useState<string>();
 
+  console.log("TESTING: ", photo);
+
   // IMAGE -
   const imageHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const file: File | undefined = e.target.files?.[0];
