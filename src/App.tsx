@@ -12,7 +12,7 @@ import {
   NewProduct,
   BarChart,
   LineChart,
-  PieChart
+  PieChart,
 } from "./utils/lazyRoutes";
 import { Suspense } from "react";
 import Loader from "./components/Loader";
@@ -22,7 +22,7 @@ const App = () => {
     <Router>
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/admin/dashboard" index element={<Dashboard />} />
+          <Route path="/admin" element={<Dashboard />} index />
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/customer" element={<Customers />} />
           <Route path="/admin/transaction" element={<Transaction />} />
@@ -39,7 +39,6 @@ const App = () => {
             path="/admin/transaction/:id"
             element={<TransactionManagement />}
           />
-
         </Routes>
       </Suspense>
     </Router>

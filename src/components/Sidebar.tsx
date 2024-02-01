@@ -53,17 +53,19 @@ const Sidebar = () => {
                 <li
                   key={item.id}
                   style={{
-                    backgroundColor: location.pathname.includes(item.url)
-                      ? "rgba(0, 115, 225, 0.1)"
-                      : "white",
+                    backgroundColor:
+                      location.pathname === item.url
+                        ? "rgba(0, 115, 225, 0.1)"
+                        : "white",
                   }}
                 >
                   <Link
                     to={item.url}
                     style={{
-                      color: location.pathname.includes(item.url)
-                        ? "rgb(0, 115, 225)"
-                        : "black",
+                      color:
+                        location.pathname === item.url
+                          ? "rgb(0, 115, 225)"
+                          : "black",
                     }}
                   >
                     {<item.Icon />}
@@ -84,17 +86,19 @@ const Sidebar = () => {
                 <li
                   key={item.id}
                   style={{
-                    backgroundColor: location.pathname.includes(item.url)
-                      ? "rgba(0, 115, 225, 0.1)"
-                      : "white",
+                    backgroundColor:
+                      location.pathname === item.url
+                        ? "rgba(0, 115, 225, 0.1)"
+                        : "white",
                   }}
                 >
                   <Link
                     to={item.url}
                     style={{
-                      color: location.pathname.includes(item.url)
-                        ? "rgb(0, 115, 225)"
-                        : "black",
+                      color:
+                        location.pathname === item.url
+                          ? "rgb(0, 115, 225)"
+                          : "black",
                     }}
                   >
                     {<item.Icon />}
