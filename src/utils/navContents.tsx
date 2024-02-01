@@ -16,7 +16,7 @@ interface ListProps {
 // DASHBOARD -
 export const DashboardContents: ListProps[] = [
   {
-    url: "/admin",
+    url: "/",
     text: "Dashboard",
     Icon: RiDashboardFill,
     id: Math.random() * 100,
