@@ -56,7 +56,7 @@ const ProductManagement = () => {
 
         <article>
           <form encType="multipart/form-data" onSubmit={submitHandler}>
-            <h2>New Product</h2>
+            <h2>Update Product</h2>
             <div>
               <label>Name</label>
               <input
