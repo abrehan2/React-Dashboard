@@ -9,3 +9,10 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/abrehan2/React-Dashboard.git
 ```
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+The MIT License (MIT) is a permissive open-source license that allows for the use, modification, and distribution of this software. Feel free to use the code in this project for your own purposes, subject to the terms of the MIT License.
+
+For more information, see the [LICENSE](LICENSE) file.
